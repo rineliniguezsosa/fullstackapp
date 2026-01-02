@@ -22,6 +22,8 @@ export default function Form() {
             value={form.email}
             onChange={handleChange}
         />
+
+        <button type="submit">Crear usuario</button>
     </form>
   )
 }

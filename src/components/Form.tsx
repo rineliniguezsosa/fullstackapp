@@ -9,23 +9,33 @@ export default function Form() {
         email:''
     })
   return (
-    <form onSubmit={submitForm} className="w-1/2 h-screen m-2 flex flex-col items-center justify-center border-2 border-blue-400">
+    <form onSubmit={submitForm} className="w-1/4 h-screen m-2 flex flex-col gap-2 items-center justify-center border-2 border-blue-400">
         <input 
             type="text" 
-            name="name"
-            id="name"
+            name="nombre"
+            id="nombre"
             value={form.nombre}
+            className="
+                 w-full rounded-lg border border-gray-300 bg-white px-4 py-2 text-sm
+                 text-gray-900 placeholder-gray-400
+                 focus:border-blue-500 focus:ring-2 focus:ring-blue-500 focus:outline-none
+                 transition
+                 dark:border-gray-700 dark:bg-gray-900 dark:text-gray-100 dark:placeholder-gray-500"
             onChange={handleChange}
         />
         <input 
             type="email" 
             name="email"
             id="email"
+            className="w-full rounded-lg border border-gray-300 bg-white px-4 py-2 text-sm
+            text-gray-900 placeholder-gray-400
+            focus:border-blue-500 focus:ring-2 focus:ring-blue-500 focus:outline-none
+            transition dark:border-gray-700 dark:bg-gray-900 dark:text-gray-100 dark:placeholder-gray-500"
             value={form.email}
             onChange={handleChange}
         />
 
-        <button type="submit">Crear usuario</button>
+        <button className="bg-blue-300 text-gray-900 px-4 py-2 rounded-md hover:bg-blue-400 transition" type="submit">Crear usuario</button>
     </form>
   )
 }

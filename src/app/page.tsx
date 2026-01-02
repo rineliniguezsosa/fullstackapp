@@ -1,3 +1,5 @@
+"use client"
+
 import  Head  from '../components/Head'
 import Form from '../components/Form'
 

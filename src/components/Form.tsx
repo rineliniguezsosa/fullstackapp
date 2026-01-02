@@ -1,3 +1,5 @@
+"use client"
+
 import { useForm } from "@/hooks/useForm"
 
 

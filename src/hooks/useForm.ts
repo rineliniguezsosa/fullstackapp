@@ -29,6 +29,10 @@ export const useForm = <T extends FormState<string>>(initialForm: T) =>{
                     email:form.email
                 })
             });
+
+            if (!resp.ok) {
+                throw new Error('failed to create user');
+            };
         } catch (error) {
             console.log(error);
             

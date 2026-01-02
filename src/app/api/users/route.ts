@@ -8,6 +8,11 @@ export async function POST(request:Request){
     'INSERT INTO users (name,email) VALUES ($1, $2) RETURNING *',
     [name,email]
   );
-  
+
     return NextResponse.json(rows[0]);
+}
+
+export async function GET() {
+  const { rows } = await pool.query("SELECT * FROM users");
+  return NextResponse.json(rows);
 }

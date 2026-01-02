@@ -9,7 +9,7 @@ export default function Form() {
         email:''
     })
   return (
-    <form onSubmit={submitForm} className="w-1/4 h-screen m-2 flex flex-col gap-2 items-center justify-center border-2 border-blue-400">
+    <form onSubmit={submitForm} className="w-1/4 m-2 h-screen flex flex-col gap-2 items-center justify-center">
         <input 
             type="text" 
             name="nombre"

@@ -19,6 +19,20 @@ export const useForm = <T extends FormState<string>>(initialForm: T) =>{
 
     const submitForm = async(e:React.FormEvent) =>{
         e.preventDefault();
+
+        try {
+            const resp = await fetch('http://localhost:3000/api/users',{
+                method:'POST',
+                headers: { "Content-Type": "application/json" },
+                body:JSON.stringify({
+                    name:form.nombre,
+                    email:form.email
+                })
+            });
+        } catch (error) {
+            console.log(error);
+            
+        }
     }
 
     return {

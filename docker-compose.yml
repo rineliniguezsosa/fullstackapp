@@ -14,9 +14,9 @@ services:
       image: postgres:16 
       container_name: fullstackappDB
       restart: always
-      environment: # Usuario/DB
+      environment: # User/DB
         POSTGRES_USER: postgres
         POSTGRES_PASSWORD: postgres
         POSTGRES_DB: fullstackdb
-      ports: #Acceso externo 
+      ports: #external acccess
       - "5433:5432"

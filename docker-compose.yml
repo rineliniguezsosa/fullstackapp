@@ -3,3 +3,5 @@ services:
     nextjs:
       build:
       container_name: fullstackapp
+      ports:
+      - "3000:3000"

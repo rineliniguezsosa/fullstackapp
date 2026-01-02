@@ -1,14 +1,14 @@
 
 services:
     nextjs:
-      build:
+      build: .
       container_name: fullstackapp
       ports:
-      - "3000:3000"
+        - "3000:3000"
       env_file: #lee el archivo env
-      - .env
+        - .env
       depends_on:
-      - postgres
+        - postgres
 
     postgres:
       image: postgres:16 
@@ -19,9 +19,9 @@ services:
         POSTGRES_PASSWORD: postgres
         POSTGRES_DB: fullstackdb
       ports: #external acccess
-      - "5433:5432"
+        - "5433:5432"
       volumes:
-      - postgres_data:/var/lib/postgresql/data
+        - postgres_data:/var/lib/postgresql/data
 
 volumes:
   postgres_data:

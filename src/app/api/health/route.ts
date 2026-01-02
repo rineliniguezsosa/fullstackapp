@@ -1,5 +1,5 @@
 import { NextResponse } from "next/server";
 
-export async function GET(){
-    return NextResponse.json({working:"OK"})
-}
+export const GET = async () => {
+    return NextResponse.json({working:"OK"});
+};

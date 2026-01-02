@@ -15,8 +15,13 @@ export const useForm = <T extends FormState<string>>(initialForm: T) =>{
         }));
     }
 
+    const submitForm = async(e:React.FormEvent) =>{
+
+    }
+
     return {
         handleChangle,
-        form
+        form,
+        submitForm
     }
 }

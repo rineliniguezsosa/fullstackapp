@@ -8,5 +8,6 @@ export async function POST(request:Request){
     'INSERT INTO users (name,email) VALUES ($1, $2) RETURNING *',
     [name,email]
   );
-  return NextResponse.json({msj:"Aqui obtengo los usuarios"});
+  
+    return NextResponse.json(rows[0]);
 }

@@ -2,3 +2,4 @@
 services:
     nextjs:
       build:
+      container_name: fullstackapp

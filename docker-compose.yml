@@ -11,3 +11,4 @@ services:
       - postgres
 
     postgres:
+      image: postgres:16 

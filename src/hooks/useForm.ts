@@ -6,7 +6,7 @@ interface FormState<T>{
 export const useForm = <T extends FormState<string>>(initialForm: T) =>{
     const [form, setForm] = useState(initialForm);
 
-    const handleChangle = (e:React.ChangeEvent<HTMLInputElement>)  => {
+    const handleChange = (e:React.ChangeEvent<HTMLInputElement>)  => {
         const { name, value } = e.target;
 
         setForm(prevState => ({
@@ -20,7 +20,7 @@ export const useForm = <T extends FormState<string>>(initialForm: T) =>{
     }
 
     return {
-        handleChangle,
+        handleChange,
         form,
         submitForm
     }

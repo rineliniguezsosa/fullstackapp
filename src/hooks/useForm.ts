@@ -16,7 +16,7 @@ export const useForm = <T extends FormState<string>>(initialForm: T) =>{
     }
 
     const submitForm = async(e:React.FormEvent) =>{
-
+        e.preventDefault();
     }
 
     return {

@@ -2,6 +2,8 @@
 
 export default function Head() {
   return (
-    <div>Head</div>
+    <header className="w-full p-5 bg-blue-300">
+
+    </header>
   )
 }

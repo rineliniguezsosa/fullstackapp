@@ -18,3 +18,5 @@ services:
         POSTGRES_USER: postgres
         POSTGRES_PASSWORD: postgres
         POSTGRES_DB: fullstackdb
+      ports: #Acceso externo 
+      - "5433:5432"

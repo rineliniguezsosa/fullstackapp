@@ -3,7 +3,8 @@ import { useForm } from "@/hooks/useForm"
 
 export default function Form() {
     const { form,handleChange,submitForm} = useForm({
-        nombre:''
+        nombre:'',
+        email:''
     })
   return (
     <form onSubmit={submitForm} className="w-1/2 h-screen m-2 flex flex-col items-center justify-center border-2 border-blue-400">
@@ -12,6 +13,13 @@ export default function Form() {
             name="name"
             id="name"
             value={form.nombre}
+            onChange={handleChange}
+        />
+        <input 
+            type="email" 
+            name="email"
+            id="email"
+            value={form.email}
             onChange={handleChange}
         />
     </form>

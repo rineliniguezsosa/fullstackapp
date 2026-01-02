@@ -1,8 +1,12 @@
-
-
+import { useState } from "react"
 
 export const useForm = () =>{
-    return {
+
+    const handleChangle = (e:React.ChangeEvent<HTMLInputElement>)  => {
         
+    }
+
+    return {
+
     }
 }
